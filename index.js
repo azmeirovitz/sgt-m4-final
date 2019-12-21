@@ -38,6 +38,35 @@ module.exports = app.get('/api/test', async (req, res)=> {
     });
 
 });
+
+module.exports = app.get('/api/grades', async (req, res) => {
+
+    const [studentGrade] = await db.execute(`SELECT pid, course, grade, name, updated AS lastUpdated FROM grades`);
+
+    console.log('studentGrade: ', studentGrade);
+
+    const results = studentGrade.map(item => {
+        const {pid, course, grade, name, lastUpdated} = item;
+
+        return {
+            //item //{
+                     pid: pid,
+                     course: course,
+                     grade: grade,
+                     name:name,
+                     updated: lastUpdated
+                 //}
+            }
+
+        });
+
+    res.send({
+        message: 'Test route /api/grades is working!',
+        results: results
+        
+    });
+
+});
     
 
 app.listen(PORT, () => {
