@@ -1,0 +1,15 @@
+{
+    host: '',
+    user: '',
+    password: '',
+    dtabase: ''
+}
+
+
+
+// {
+//     "host": "localhost",
+//     "user": "root",
+//     "password": "root",
+//     "database": "sweet_corner"
+// }
