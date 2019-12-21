@@ -4,6 +4,7 @@
   "description": "",
   "main": "index.js",
   "scripts": {
+    "start": "nodemon index.js",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "repository": {
@@ -15,5 +16,12 @@
   "bugs": {
     "url": "https://github.com/azmeirovitz/sgt-m4-final/issues"
   },
-  "homepage": "https://github.com/azmeirovitz/sgt-m4-final#readme"
+  "homepage": "https://github.com/azmeirovitz/sgt-m4-final#readme",
+  "dependencies": {
+    "express": "^4.17.1",
+    "mysql2": "^2.0.2"
+  },
+  "devDependencies": {
+    "nodemon": "^2.0.2"
+  }
 }
