@@ -9,6 +9,3 @@ const db = pool.promise();
 
 //exports the connection pool to be used in other files
 module.exports = db;
-
-
-
